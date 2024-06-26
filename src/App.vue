@@ -11,6 +11,7 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import FooterComp from './components/Footer.vue'
+/* import LandingVue from './components/Landing.vue' */
 
 export default {
   components: {
