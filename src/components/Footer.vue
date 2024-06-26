@@ -1,5 +1,5 @@
 <template>
-    <footer class="container-fluid  shadow my-5">
+    <footer class="container-fluid  shadow">
         <div class="row">
 
             <p class="lead">
