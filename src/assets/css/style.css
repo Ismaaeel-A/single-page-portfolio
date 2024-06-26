@@ -26,6 +26,9 @@ nav a.router-link-exact-active {
 
 /* custom variables */
 
+/* scrollbar */
+::-webkit-scrollbar{display: none;}
+
 /* select all img */
 img {
     aspect-ratio: 1;
@@ -36,4 +39,10 @@ img {
 /* logo */
 img[alt="logo"] {
     width: 5rem;
+}
+
+/* wrapper */
+:is(.wrapper){
+    display: grid;
+    grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
