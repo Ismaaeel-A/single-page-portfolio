@@ -5,7 +5,7 @@
   </section>
 
   <section class="row" id="about">
-
+    <AboutSection />
   </section>
 
   <section class="row" id="resume">
@@ -29,11 +29,14 @@
 <script>
 // @ is an alias to /src
 import LandingSection from '../components/LandingSection.vue'
+import AboutSection from '../components/AboutSection.vue'
+
 
 export default {
   name: 'HomeView',
   components: {
-    LandingSection
+    LandingSection,
+    AboutSection
   }
 }
 </script>

@@ -30,10 +30,8 @@ const cnt = ref(-1)
 
 function repeat() {
   try {
-    console.log(title.value);
     if (cnt.value == jobTitle.value?.length) cnt.value = 0;
     title.value = jobTitle.value?.at(cnt.value)?.title; 
-    console.log(cnt.value , title.value);
     
     setTimeout(repeat, 2000)
     cnt.value++ 
@@ -45,7 +43,6 @@ function repeat() {
 
 onMounted(() => {
   store.dispatch('fetchJobTitle')
-  console.log('crud');
   repeat()
 })
 

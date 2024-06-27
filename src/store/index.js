@@ -43,16 +43,9 @@ export default createStore({
   actions: {
     async fetchJobTitle(context) {
       try {
-
         let {
           jobTitle
-
         } = await (await axios.get(dataURL)).data
-
-
-        console.log(jobTitle);
-
-
         context.commit('setJobTitle', jobTitle)
 
       } catch (e) {
@@ -72,8 +65,11 @@ export default createStore({
         let {
           about
         } = await (await axios.get(dataURL)).data
+        console.log(about);
         context.commit("setAbout", about)
+
       } catch (e) {
+
         Swal.fire({
           title: "Error",
           text: "Failed to fetch the about",
