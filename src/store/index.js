@@ -20,7 +20,7 @@ export default createStore({
 
   },
   mutations: {
-    setJobtitle(state, value) {
+    setJobTitle(state, value) {
       state.jobTitle = value
     },
     setAbout(state, value) {
@@ -43,11 +43,20 @@ export default createStore({
   actions: {
     async fetchJobTitle(context) {
       try {
+
         let {
           jobTitle
+
         } = await (await axios.get(dataURL)).data
-        context.commit("setJobTitle", jobTitle)
+
+
+        console.log(jobTitle);
+
+
+        context.commit('setJobTitle', jobTitle)
+
       } catch (e) {
+
         Swal.fire({
           title: "Error",
           text: "Failed to fetch the job title",
